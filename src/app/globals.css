@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "AnotherDanger";
+  src: url("../../public/fonts/AnotherDanger.otf") format("opentype");
+}
+
+:root {
+  --custom-font: "AnotherDanger", sans-serif;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
