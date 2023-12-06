@@ -1,5 +1,10 @@
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import SocialButton from "../../components/SocialButton";
+import Github from "../../public/github.svg";
+import Instagram from "../../public/instagram.svg";
+import Linkedin from "../../public/linkedin.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,7 +31,17 @@ export default function Home() {
             <button className=" bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto">
               Contact me
             </button>
-            <div>Socials</div>
+            <div className="flex flex-row gap-5">
+              <SocialButton bgColour="github">
+                <Github />
+              </SocialButton>
+              <SocialButton bgColour="instagram">
+                <Instagram />
+              </SocialButton>
+              <SocialButton bgColour="linkedin">
+                <Linkedin />
+              </SocialButton>
+            </div>
           </div>
         </div>
         <div className="h-[30rem] rounded-3xl p-8 bg-[url('../../public/profile.jpg')] bg-cover bg-center">
