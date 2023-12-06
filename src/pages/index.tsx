@@ -4,7 +4,7 @@ import SocialButton from "../../components/SocialButton";
 import Github from "../../public/github.svg";
 import Instagram from "../../public/instagram.svg";
 import Linkedin from "../../public/linkedin.svg";
-import Link from "next/link";
+import ProjectCard from "../../components/ProjectCard";
 
 export default function Home() {
   return (
@@ -32,13 +32,22 @@ export default function Home() {
               Contact me
             </button>
             <div className="flex flex-row gap-5">
-              <SocialButton bgColour="github">
+              <SocialButton
+                bgColour="github"
+                url="https://github.com/jaigaignery"
+              >
                 <Github />
               </SocialButton>
-              <SocialButton bgColour="instagram">
+              <SocialButton
+                bgColour="instagram"
+                url="https://www.instagram.com/fishjailens"
+              >
                 <Instagram />
               </SocialButton>
-              <SocialButton bgColour="linkedin">
+              <SocialButton
+                bgColour="linkedin"
+                url="https://www.linkedin.com/in/jai-gaignery-73b551243/"
+              >
                 <Linkedin />
               </SocialButton>
             </div>
@@ -47,6 +56,16 @@ export default function Home() {
         <div className="h-[30rem] rounded-3xl p-8 bg-[url('../../public/profile.jpg')] bg-cover bg-center">
           h
         </div>
+      </section>
+
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 my-4">
+        <ProjectCard
+          name="Pollpal"
+          description="Seamlessly create and host polls"
+        />
+        <ProjectCard name="Project 2" />
+        <ProjectCard name="Project 3" />
+        <ProjectCard name="Calculator" description="Simple calculator app" />
       </section>
     </>
   );
