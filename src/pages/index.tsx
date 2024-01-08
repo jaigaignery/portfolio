@@ -42,13 +42,14 @@ export default function Home() {
         {/* Div 1: Displayed on the left on large screens */}
         <div className="rounded-3xl p-10 flex flex-col gap-16 bg-[url('../../public/gradient-bg.jpg')] bg-cover">
           <h1 className="text-4xl font-semibold">
-            Hey! I'm Jai, a full-stack developer with a passion for innovation.
+            Hey! I&apos;m Jai, a full-stack developer with a passion for
+            innovation.
           </h1>
           <p className="flex-1">
             As a young full-stack developer with a passion for innovation, my
             goal is to leave my mark on the web by creating captivating and
-            powerful web apps, to make every web user's life just a little bit
-            easier.
+            powerful web apps, to make every web user&apos;s life just a little
+            bit easier.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-4">
             <a
