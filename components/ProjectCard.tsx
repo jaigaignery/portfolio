@@ -1,11 +1,13 @@
 import React from "react";
 import Arrow from "../public/arrow.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   name?: string | undefined;
   description?: string | undefined;
   imageUrl?: string | undefined;
+  projectUrl?: string | undefined;
   bgColour?: string | undefined;
   altTag?: string | undefined;
   dark?: boolean | undefined;
@@ -15,6 +17,7 @@ const ProjectCard: React.FC<Props> = ({
   name = "Block name",
   description = "This is an amazing block",
   imageUrl = "/project-1.png",
+  projectUrl = "/",
   bgColour = "#e4e4e7",
   altTag = "project image",
   dark = false,
@@ -33,11 +36,19 @@ const ProjectCard: React.FC<Props> = ({
             </p>
           </div>
           <div className="h-12 w-12 bg-white rounded-full flex justify-center items-center cursor-pointer">
-            <Arrow className="w-6 h-6" />
+            <Link target={projectUrl === "/" ? "" : "_blank"} href={projectUrl}>
+              <Arrow className="w-6 h-6" />
+            </Link>
           </div>
         </div>
         <div className="h-full pb-6 flex justify-center items-center">
-          <Image src={imageUrl} width="350" height="350" alt={altTag} />
+          <Image
+            src={imageUrl}
+            width="350"
+            height="350"
+            alt={altTag}
+            quality={100}
+          />
         </div>
       </div>
     </div>

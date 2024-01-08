@@ -39,6 +39,7 @@ export default function Home() {
       <Navbar />
 
       <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 mb-4">
+        {/* Div 1: Displayed on the left on large screens */}
         <div className="rounded-3xl p-10 flex flex-col gap-16 bg-[url('../../public/gradient-bg.jpg')] bg-cover">
           <h1 className="text-4xl font-semibold">
             Hey! I'm Jai, a full-stack developer with a passion for innovation.
@@ -75,28 +76,37 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[30rem] rounded-3xl p-8 bg-[url('../../public/profile.jpg')] bg-cover bg-center" />
+
+        {/* Div 2: Displayed on the right on large screens */}
+        <div className="h-[30rem] rounded-3xl p-8 bg-[url('../../public/profile.jpg')] bg-cover bg-center lg:col-start-2" />
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 my-4">
         <ProjectCard
           name="Pollpal"
           description="Seamlessly create and host polls"
+          projectUrl="https://pollpal-production.up.railway.app"
           imageUrl="/project-2.png"
         />
         <ProjectCard
           name="LinkForge"
           description="Store and share your socials and links, all from one page"
           imageUrl="/project-3.png"
+          projectUrl="https://jaigaignery-linkforge.vercel.app"
+          bgColour="#fdd1d2"
+        />
+        <ProjectCard
+          name="Calculator"
+          description="Simple calculator app"
+          imageUrl="/project-4.png"
+          projectUrl="https://jaigaignery-linkforge.vercel.app"
+          bgColour="#9cbdb6"
         />
         <ProjectCard
           name="Portfolio"
           description="Check out my work (you're already here!)"
-          imageUrl="/project-3.png"
-          bgColour="indigo"
-          dark
+          bgColour="#f8cb15"
         />
-        <ProjectCard name="Calculator" description="Simple calculator app" />
       </section>
     </motion.div>
   );
