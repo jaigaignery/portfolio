@@ -51,9 +51,13 @@ export default function Home() {
             easier.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-4">
-            <button className=" bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto">
+            <a
+              href="mailto:jaigaignery@gmail.com"
+              className="bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto"
+            >
               Contact me
-            </button>
+            </a>
+
             <div className="flex flex-row gap-5">
               <SocialButton
                 bgColour="github"
