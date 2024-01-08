@@ -35,11 +35,11 @@ const ProjectCard: React.FC<Props> = ({
               {description}
             </p>
           </div>
-          <div className="h-12 w-12 bg-white rounded-full flex justify-center items-center cursor-pointer">
-            <Link target={projectUrl === "/" ? "" : "_blank"} href={projectUrl}>
+          <Link target={projectUrl === "/" ? "" : "_blank"} href={projectUrl}>
+            <div className="h-12 w-12 bg-white rounded-full flex justify-center items-center cursor-pointer">
               <Arrow className="w-6 h-6" />
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className="h-full pb-6 flex justify-center items-center">
           <Image
